@@ -1,0 +1,11 @@
+{
+    "keyboard_name": "KP75",
+    "manufacturer": "kpax",
+    "url": "www.kpaxart.com",
+    "maintainer": "kpaxart",
+    "usb": {
+        "vid": "0x1981",
+        "pid": "0x9500",
+        "device_version": "1.0.0"
+    }
+}
