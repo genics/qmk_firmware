@@ -16,7 +16,9 @@
 
 #pragma once
 
-#define CH_CFG_ST_FREQUENCY 10000
+#define HAL_USE_PWM    TRUE
+#define HAL_USE_PAL    TRUE
+// #define HAL_USE_GPT    TRUE
+// #define HAL_USE_I2C    TRUE
 
-#include_next <chconf.h>
-
+#include_next <halconf.h>

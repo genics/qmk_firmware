@@ -1,4 +1,4 @@
-/* Copyright 2022 ZhaQian
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,17 +14,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "bootloader.h"
+#pragma once
 
-#include <ch.h>
+#include_next <mcuconf.h>
 
-#define MAGIC_BOOT 0x544F4F42UL
-#define MAGIC_REG *(volatile uint32_t*)0x20004000
+#undef AIR32_PWM_USE_TIM1
+#define AIR32_PWM_USE_TIM1 TRUE
 
-void bootloader_jump(void) {
-    MAGIC_REG = MAGIC_BOOT;
-    NVIC_SystemReset();
-}
+#undef AIR32_PLLMUL_VALUE
+#undef AIR32_ADCPRE 
+#undef AIR32_USBPRE
 
-void enter_bootloader_mode_if_requested(void) {}
-
+// PLLCLKOUT = 216MHz
+#define AIR32_PLLMUL_VALUE                  27
+#define AIR32_ADCPRE                        AIR32_ADCPRE_DIV32
+#define AIR32_USBPRE                        AIR32_USBPRE_DIV4P5

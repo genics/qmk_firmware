@@ -23,6 +23,9 @@
     "bootmagic": {
         "matrix": [0, 0]
     },
+    "rgb_matrix": {
+        "driver": "WS2812"
+    },
     "layouts": {
         "LAYOUT": {
             "layout": [
