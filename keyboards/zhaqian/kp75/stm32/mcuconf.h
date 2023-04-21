@@ -1,4 +1,4 @@
-/* Copyright 2023 ZhaQian
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,37 +16,18 @@
 
 #pragma once
 
-#define LOCKING_SUPPORT_ENABLE
-#define LOCKING_RESYNC_ENABLE
+#include_next <mcuconf.h>
 
-#define FORCE_NKRO
+#undef STM32_PWM_USE_TIM1
+#define STM32_PWM_USE_TIM1 TRUE
+// #undef STM32_GPT_USE_TIM6
+// #define STM32_GPT_USE_TIM6                  TRUE
+// #undef STM32_GPT_USE_TIM7
+// #define STM32_GPT_USE_TIM7                  TRUE
+// #undef STM32_GPT_USE_TIM8
+// #define STM32_GPT_USE_TIM8                  TRUE
 
-
-
-#ifdef UNDERGLOW_RGB_MATRIX_ENABLE
-#define UG_RGB_MATRIX_ANIMATIONS
-#endif
-
-#ifdef DYNAMIC_RGB_INDICATORS_ENABLE
-#define ENABLE_RGB_INDICATORS_ANIMATIONS
-#endif
-
-#ifdef VIA_ENABLE
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
-#endif
-
-#ifdef OPENRGB_ENABLE
-#define OPENRGB_DIRECT_MODE_USE_UNIVERSAL_BRIGHTNESS
-#endif
-
-#ifdef DYNAMIC_TAP_DANCE_ENABLE
-#define DYNAMIC_TAP_DANCE_ENTRIES 10
-#endif
-
-#ifdef DYNAMIC_COMBOS_ENABLE
-#define DYNAMIC_COMBOS_ENTRIES 10
-#endif
-
-
+#undef STM32_PWM_USE_TIM4
+#define STM32_PWM_USE_TIM4 TRUE
 
 

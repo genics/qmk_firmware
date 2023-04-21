@@ -1,8 +1,8 @@
-# z40
+# kp75 by kpaxart
 
-A 43 keys keyboard with rgb.
+A 75% keyboard with rgb. work with openrgb. singlergb.
 
-Note: The source code for this keyboard has only been tested in this repository[[zhaqian](https://github.com/zhaqian12/qmk_firmware/tree/zhaqian)]!
+83 key, and a encode. split space, iso enter.
 
 * Keyboard Maintainer: [zhaqian](https://github.com/zhaqian12)
 * Hardware Supported: z40

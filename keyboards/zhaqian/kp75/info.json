@@ -8,9 +8,6 @@
         "pid": "0x0905",
         "device_version": "0.0.1"
     },
-    "processor": "STM32F103",
-    "bootloader": "uf2boot",
-    "board": "GENERIC_STM32_F103XB",
     "features": {
         "bootmagic": true,
         "command": false,
