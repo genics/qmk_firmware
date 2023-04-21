@@ -1,4 +1,4 @@
-/* Copyright 2022 ZhaQian
+/* Copyright 2023 ZhaQian
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -68,22 +68,4 @@ led_config_t g_led_config = {
 	}
 };
 
-bool rgb_matrix_indicators_kb(void) {
-    if (!rgb_matrix_indicators_user()) {
-        return false;
-    }
-
-    HSV hsv = {0, 255, rgb_matrix_get_val()};
-    RGB rgb = hsv_to_rgb(hsv);
-    switch(biton32(layer_state)) {
-        case 1: rgb_matrix_set_color(73, rgb.r, rgb.g, rgb.b); break;
-        case 2: rgb_matrix_set_color(73, rgb.r, rgb.g, rgb.b); break;
-        case 3: rgb_matrix_set_color(73, rgb.r, rgb.g, rgb.b); break;
-        // case 4: rgb_matrix_set_color(4, rgb.r, rgb.g, rgb.b); break;
-        // case 5: rgb_matrix_set_color(5, rgb.r, rgb.g, rgb.b); break;
-        // case 6: rgb_matrix_set_color(6, rgb.r, rgb.g, rgb.b); break;
-        default: break;
-    }
-    return true;
-}
 #endif

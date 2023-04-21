@@ -1,4 +1,4 @@
-/* Copyright 2022 ZhaQian
+/* Copyright 2023 ZhaQian
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,14 +19,16 @@
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
 
-#define FORCE_NKRO
-
-#ifdef ENCODER_ENABLE
-#define ENCODER_RESOLUTION 4
-#endif
+// #define FORCE_NKRO
 
 #ifdef RGB_MATRIX_ENABLE
-#define RGB_MATRIX_LED_COUNT 106
+#define RGB_DI_PIN A10
+#define WS2812_PWM_DRIVER PWMD1
+#define WS2812_PWM_CHANNEL 3
+#define WS2812_DMA_STREAM STM32_DMA1_STREAM5
+#define WS2812_DMA_CHANNEL 5
+
+#define RGB_MATRIX_LED_COUNT 43
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 
@@ -39,26 +41,5 @@
 #endif
 #endif
 
-#ifdef UNDERGLOW_RGB_MATRIX_ENABLE
-#define UG_RGB_MATRIX_ANIMATIONS
-#endif
 
-#ifdef DYNAMIC_RGB_INDICATORS_ENABLE
-#define ENABLE_RGB_INDICATORS_ANIMATIONS
-#endif
 
-#ifdef VIA_ENABLE
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
-#endif
-
-#ifdef OPENRGB_ENABLE
-#define OPENRGB_DIRECT_MODE_USE_UNIVERSAL_BRIGHTNESS
-#endif
-
-#ifdef DYNAMIC_TAP_DANCE_ENABLE
-#define DYNAMIC_TAP_DANCE_ENTRIES 10
-#endif
-
-#ifdef DYNAMIC_COMBOS_ENABLE
-#define DYNAMIC_COMBOS_ENTRIES 10
-#endif

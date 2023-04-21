@@ -1,21 +1,17 @@
-# kp75 by kpaxart
+# z40
 
-A 75% keyboard with rgb. work with openrgb. singlergb.
-
-83 key, and a encode. split space, iso enter.
+A 43 keys keyboard with rgb.
 
 Note: The source code for this keyboard has only been tested in this repository[[zhaqian](https://github.com/zhaqian12/qmk_firmware/tree/zhaqian)]!
 
 * Keyboard Maintainer: [zhaqian](https://github.com/zhaqian12)
-* Hardware Supported: kp75
+* Hardware Supported: z40
 * Hardware Availability: [zq-kb](https://github.com/zhaqian12/ZQ-Keyboard)
 
 Make example for this keyboard (after setting up your build environment):
 
-    make zhaqian/kp75/f103:default
-    make zhaqian/kp75/f103:via
-    make zhaqian/kp75/air32f103:default
-    make zhaqian/kp75/air32f103:via
+    make zhaqian/z40:default
+    make zhaqian/z40:via
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
  
