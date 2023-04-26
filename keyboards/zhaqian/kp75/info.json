@@ -16,7 +16,7 @@
         "mousekey": true,
         "nkro": true,
         "rgblight": false,
-        // "audio": false,
+        "audio": true,
         "rgb_matrix": true
     },
     "matrix_pins": {

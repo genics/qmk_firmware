@@ -50,7 +50,7 @@
 #endif
 
 #ifdef VIA_ENABLE
-#define DYNAMIC_KEYMAP_LAYER_COUNT 3
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 #endif
 
 #ifdef OPENRGB_ENABLE
@@ -64,6 +64,7 @@
 #ifdef DYNAMIC_COMBOS_ENABLE
 #define DYNAMIC_COMBOS_ENTRIES 10
 #endif
+
 
 
 
