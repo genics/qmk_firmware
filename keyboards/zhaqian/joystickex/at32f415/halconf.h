@@ -1,4 +1,4 @@
-/* Copyright 2021 ZhaQian
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,9 +16,6 @@
 
 #pragma once
 
-#ifdef RGB_MATRIX_ENABLE
-#define RGB_DI_PIN A10
-#define WS2812_PWM_DRIVER PWMD1
-#define WS2812_PWM_CHANNEL 3
-#define WS2812_DMA_STREAM AT32_DMA1_STREAM5
-#endif
+#define HAL_USE_ADC   TRUE
+
+#include_next <halconf.h>

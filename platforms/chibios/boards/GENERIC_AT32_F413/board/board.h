@@ -1,6 +1,6 @@
-#pragma once
 /*
-    Copyright (C)
+    Copyright (C) Zhaqian
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -11,11 +11,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */
-
-/*
- * This file has been automatically generated using ChibiStudio board
- * generator plugin. Do not edit manually.
- */
 
 #ifndef BOARD_H
 #define BOARD_H
@@ -30,11 +25,10 @@
 /*
  * Port A setup.
  * Everything input with pull-up except:
- * PA11 - Alternate output  (DP PUUP).
  */
 #define VAL_GPIOACRL            0x88888888      /*  PA7...PA0 */
-#define VAL_GPIOACRH            0x8888F888      /* PA15...PA8 */
-#define VAL_GPIOAODR            0xFFFFF7FF
+#define VAL_GPIOACRH            0x88888888      /* PA15...PA8 */
+#define VAL_GPIOAODR            0xFFFFFFFF
 
 /*
  * Port B setup.
@@ -63,35 +57,26 @@
 #define VAL_GPIODODR            0xFFFFFFFF
 
 /*
+ * Port F setup.
+ * Everything input with pull-up except:
+ */
+#define VAL_GPIOFCRL            0x88888888      /*  PF7...PF0 */
+#define VAL_GPIOFCRH            0x88888888      /* PF15...PF8 */
+#define VAL_GPIOFODR            0xFFFFFFFF
+
+/*
  * Board identifier.
  */
-#define BOARD_AIR32F103
-#define BOARD_NAME                  "AIR32F103"
+#define BOARD_AT32F413xx
+#define BOARD_NAME               "AT32F413"
 
-#define AIR32F103xB
+#define AT32F413xB
+#define AT32F413CBT7
 
-#if !defined(AIR32F10x)
-#define AIR32F10x
-#endif
-
-#if !defined(FLASH_SIZE)
-#if defined(AIR32F103xB)
-#define FLASH_SIZE 0x20000
-#elif defined(AIR32F103xC)
-#define FLASH_SIZE 0x40000
-#endif
-#endif
-/*
- * Board oscillators-related settings.
- * NOTE: LSE not fitted.
- */
-#if !defined(AIR32_LSECLK)
-#define AIR32_LSECLK                0U
+#if !defined(AT32F413xx)
+  #define AT32F413xx
 #endif
 
-#if !defined(AIR32_HSECLK)
-#define AIR32_HSECLK                8000000U
-#endif
 /*===========================================================================*/
 /* External declarations.                                                    */
 /*===========================================================================*/
