@@ -65,6 +65,10 @@
 #define DYNAMIC_COMBOS_ENTRIES 10
 #endif
 
+#ifdef AUTO_SWITCH_LAYERS_ENABLE
+#define ASL_NO_UPDATE_FN_KEYCODE
+#endif
+
 
 
 
