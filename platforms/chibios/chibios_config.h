@@ -129,7 +129,7 @@
 #if defined(MCU_AT32)
 #    define CPU_CLOCK AT32_SYSCLK
 
-#    if defined(AT32F415xx) || defined(AT32F413xx)
+#    if defined(AT32F415xx) || defined(AT32F413xx) || defined(AT32F40x)
 #        define USE_GPIOV1
 #        define USE_I2CV1
 #        define PAL_MODE_ALTERNATE_OPENDRAIN PAL_MODE_AT32_ALTERNATE_OPENDRAIN
@@ -147,6 +147,7 @@
 
 #        define TIM_DIER_UDE TMR_IDEN_OVFDEN
 #        define TIM_DIER_TDE TMR_IDEN_TDEN
+#        define STM32_PWM_USE_ADVANCED AT32_PWM_USE_ADVANCED
 
 #    if HAL_USE_ADC
 #        define ADC_SMPR2_SMP_AN0 ADC_SPT2_SMP_AN0
