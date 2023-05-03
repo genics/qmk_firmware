@@ -15,17 +15,25 @@
  */
 
 #pragma once
-// 打开方波
-#define HAL_USE_PWM    TRUE
-// 打开spi总线
-#define HAL_USE_SPI TRUE
-#define SPI_USE_WAIT TRUE
-#define SPI_SELECT_MODE SPI_SELECT_MODE_PAD
-// 打开serial总线
-#define HAL_USE_SERIAL TRUE
-// 打开i2c
-#define HAL_USE_I2C    TRUE
-// 打开adc
-#define HAL_USE_ADC TRUE
 
-#include_next <halconf.h>
+#include_next <mcuconf.h>
+// 打开rgb通道
+#undef STM32_PWM_USE_TIM1
+#define STM32_PWM_USE_TIM1 TRUE
+// #undef STM32_GPT_USE_TIM6
+// #define STM32_GPT_USE_TIM6                  TRUE
+// #undef STM32_GPT_USE_TIM7
+// #define STM32_GPT_USE_TIM7                  TRUE
+// #undef STM32_GPT_USE_TIM8
+// #define STM32_GPT_USE_TIM8                  TRUE
+// 打开audio通道
+#undef STM32_PWM_USE_TIM4
+#define STM32_PWM_USE_TIM4 TRUE
+
+
+// 打开分离键盘通讯
+#undef STM32_SERIAL_USE_USART1
+#define STM32_SERIAL_USE_USART1 TRUE
+
+
+

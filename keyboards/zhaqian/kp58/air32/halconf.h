@@ -1,4 +1,4 @@
-/* Copyright 2022 ZhaQian
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,17 +14,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "bootloader.h"
+#pragma once
 
-#include <ch.h>
+#define HAL_USE_PWM    TRUE
+// #define HAL_USE_PAL    TRUE
+// #define HAL_USE_GPT    TRUE
+// #define HAL_USE_I2C    TRUE
 
-#define MAGIC_BOOT 0x544F4F42UL
-#define MAGIC_REG *(volatile uint32_t*)0x20004000
-
-void bootloader_jump(void) {
-    MAGIC_REG = MAGIC_BOOT;
-    NVIC_SystemReset();
-}
-
-void enter_bootloader_mode_if_requested(void) {}
-
+#include_next <halconf.h>

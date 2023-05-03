@@ -20,12 +20,6 @@
 
 #undef AIR32_PWM_USE_TIM1
 #define AIR32_PWM_USE_TIM1 TRUE
-// #undef AIR32_GPT_USE_TIM6
-// #define AIR32_GPT_USE_TIM6                  TRUE
-// #undef AIR32_GPT_USE_TIM7
-// #define AIR32_GPT_USE_TIM7                  TRUE
-// #undef AIR32_GPT_USE_TIM8
-// #define AIR32_GPT_USE_TIM8                  TRUE
 
 #undef AIR32_PWM_USE_TIM4
 #define AIR32_PWM_USE_TIM4 TRUE
@@ -35,6 +29,6 @@
 #undef AIR32_USBPRE
 
 // PLLCLKOUT = 216MHz
-// #define AIR32_PLLMUL_VALUE                  27
-// #define AIR32_ADCPRE                        AIR32_ADCPRE_DIV32
-// #define AIR32_USBPRE                        AIR32_USBPRE_DIV4P5
+#define AIR32_PLLMUL_VALUE                  27
+#define AIR32_ADCPRE                        AIR32_ADCPRE_DIV32
+#define AIR32_USBPRE                        AIR32_USBPRE_DIV4P5

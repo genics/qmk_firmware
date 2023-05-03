@@ -17,24 +17,24 @@
 #pragma once
 
 #include_next <mcuconf.h>
-// 打开方波第一通道给rgb灯用
-#undef STM32_PWM_USE_TIM1
-#define STM32_PWM_USE_TIM1 TRUE
-// 打开方波第四通道给蜂鸣器发声用
-#undef STM32_PWM_USE_TIM4
-#define STM32_PWM_USE_TIM4 TRUE
-// 打开i2c第二通道给oled用
-#undef STM32_I2C_USE_I2C2
-#define STM32_I2C_USE_I2C2 TRUE
-// 打开SPI第二通道给触控板用
-#undef STM32_SPI_USE_SPI2
-#define STM32_SPI_USE_SPI2 TRUE
-// 打开serial通道1给分离键盘用
-#undef STM32_SERIAL_USE_USART1
-#define STM32_SERIAL_USE_USART1 TRUE
-// 打开adc功能给摇杆点设备用
-#undef STM32_ADC_USE_ADC1
-#define STM32_ADC_USE_ADC1 TRUE
 
+#undef AIR32_PWM_USE_TIM1
+#define AIR32_PWM_USE_TIM1 TRUE
+// #undef AIR32_GPT_USE_TIM6
+// #define AIR32_GPT_USE_TIM6                  TRUE
+// #undef AIR32_GPT_USE_TIM7
+// #define AIR32_GPT_USE_TIM7                  TRUE
+// #undef AIR32_GPT_USE_TIM8
+// #define AIR32_GPT_USE_TIM8                  TRUE
 
+#undef AIR32_PWM_USE_TIM4
+#define AIR32_PWM_USE_TIM4 TRUE
 
+#undef AIR32_PLLMUL_VALUE
+#undef AIR32_ADCPRE
+#undef AIR32_USBPRE
+
+// PLLCLKOUT = 216MHz
+// #define AIR32_PLLMUL_VALUE                  27
+// #define AIR32_ADCPRE                        AIR32_ADCPRE_DIV32
+// #define AIR32_USBPRE                        AIR32_USBPRE_DIV4P5

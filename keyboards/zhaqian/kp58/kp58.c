@@ -1,4 +1,4 @@
-/* Copyright 2020 K-Pax <07genics@gmail.com>
+/* Copyright 2023 ZhaQian
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,6 @@
  */
 
 #include QMK_KEYBOARD_H
-
 
 #ifdef RGB_MATRIX_ENABLE
 
@@ -77,14 +76,16 @@ bool rgb_matrix_indicators_kb(void) {
     HSV hsv = {0, 255, rgb_matrix_get_val()};
     RGB rgb = hsv_to_rgb(hsv);
     switch(biton32(layer_state)) {
-        case 1: rgb_matrix_set_color(73, rgb.r, rgb.g, rgb.b); break;
-        case 2: rgb_matrix_set_color(73, rgb.r, rgb.g, rgb.b); break;
-        case 3: rgb_matrix_set_color(73, rgb.r, rgb.g, rgb.b); break;
-        // case 4: rgb_matrix_set_color(4, rgb.r, rgb.g, rgb.b); break;
-        // case 5: rgb_matrix_set_color(5, rgb.r, rgb.g, rgb.b); break;
-        // case 6: rgb_matrix_set_color(6, rgb.r, rgb.g, rgb.b); break;
+        case 1: rgb_matrix_set_color(1, rgb.r, rgb.g, rgb.b); break;
+        case 2: rgb_matrix_set_color(2, rgb.r, rgb.g, rgb.b); break;
+        case 3: rgb_matrix_set_color(3, rgb.r, rgb.g, rgb.b); break;
+        case 4: rgb_matrix_set_color(4, rgb.r, rgb.g, rgb.b); break;
+        case 5: rgb_matrix_set_color(5, rgb.r, rgb.g, rgb.b); break;
+        case 6: rgb_matrix_set_color(6, rgb.r, rgb.g, rgb.b); break;
         default: break;
     }
     return true;
 }
+
+
 #endif
