@@ -20,7 +20,7 @@
 // #define HAL_USE_PAL    TRUE
 // #define HAL_USE_GPT    TRUE
 // 打开i2c给oled用
-#define HAL_USE_I2C    TRUE
+// #define HAL_USE_I2C    TRUE
 // 打开分离键盘通讯
 #define HAL_USE_SERIAL TRUE
 

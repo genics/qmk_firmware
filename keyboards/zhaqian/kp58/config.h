@@ -33,6 +33,9 @@
 #define RGB_MATRIX_ANIMATION
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_MATRIX_KEYPRESSES
+// 定义分离rgb
+#define RGBLIGHT_SPLIT
+#define RGBLED_SPLIT { 29, 29 }
 
 #ifdef RGB_MATRIX_CUSTOM_KB
 #define RGB_MATRIX_CUSTOM_ANIMATION
@@ -73,8 +76,10 @@
 #define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
 #define SERIAL_USART_TX_PIN B6     // USART TX pin
 #define SERIAL_USART_RX_PIN B7     // USART RX pin
-#define EE_HANDS
-#define SPLIT_USB_DETECT
+// #define SPLIT_TRANSPORT = custom
+// #define SOFT_SERIAL_PIN B6
+// #define EE_HANDS
+// #define SPLIT_USB_DETECT
 
 
 
