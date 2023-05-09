@@ -80,6 +80,10 @@
 // #define SOFT_SERIAL_PIN B6
 // #define EE_HANDS
 // #define SPLIT_USB_DETECT
+// #define SERIAL_USART_PIN_SWAP      // Swap TX and RX pins if keyboard is master halve. (Only available on some MCUs)
+#define USART1_REMAP               // Remap USART TX and RX pins on STM32F103 MCUs, see table below.
+#define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
+
 
 
 
