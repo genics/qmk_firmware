@@ -72,17 +72,18 @@
 #define ASL_NO_UPDATE_FN_KEYCODE
 #endif
 
-// 定义分离键盘
+// 定义分离键盘通讯
 #define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
 #define SERIAL_USART_TX_PIN B6     // USART TX pin
 #define SERIAL_USART_RX_PIN B7     // USART RX pin
-// #define SPLIT_TRANSPORT = custom
-// #define SOFT_SERIAL_PIN B6
-// #define EE_HANDS
-// #define SPLIT_USB_DETECT
-// #define SERIAL_USART_PIN_SWAP      // Swap TX and RX pins if keyboard is master halve. (Only available on some MCUs)
 #define USART1_REMAP               // Remap USART TX and RX pins on STM32F103 MCUs, see table below.
 #define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
+
+// 定义左右手，需要生成左右固件，分别烧录。
+#define EE_HANDS
+#define SPLIT_USB_DETECT
+
+
 
 
 
