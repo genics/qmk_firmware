@@ -61,6 +61,7 @@ bool spi_start(pin_t slavePin, bool lsbFirst, uint8_t mode, uint16_t divisor) {
     while (roundedDivisor < divisor) {
         roundedDivisor <<= 1;
     }
+#endif
 
 #if defined(AT32F415xx) || defined(AT32F413xx) || defined(AT32F40x)
     if (roundedDivisor < 2 || roundedDivisor > 1024) {
