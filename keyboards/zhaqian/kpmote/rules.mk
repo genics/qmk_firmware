@@ -14,6 +14,11 @@ SRC += lvgl_helpers.c \
 
 # AUDIO_ENABLE = yes
 AUDIO_DRIVER = pwm_hardware
+# 打开震动
+HAPTIC_ENABLE = yes
+# HAPTIC_DRIVER += DRV2605L
+HAPTIC_DRIVER += SOLENOID
+
 
 # 加入zhaqian设置
 # ENCODER_ENABLE = yes
