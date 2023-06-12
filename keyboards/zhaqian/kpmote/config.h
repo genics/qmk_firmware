@@ -2,14 +2,18 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
-
-#define SERIAL_USART_FULL_DUPLEX
-#define SERIAL_USART_PIN_SWAP
-#define SERIAL_USART_TX_PIN GP0
-#define SERIAL_USART_RX_PIN GP1
-
+// 左右通信
+// #define SERIAL_USART_FULL_DUPLEX
+// #define SERIAL_USART_PIN_SWAP
+// #define SERIAL_USART_TX_PIN GP0
+// #define SERIAL_USART_RX_PIN GP1
+// #define SERIAL_PIO_USE_PIO0
+// 强制全键无冲
+#define FORCE_NKRO
+// 双击重启
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17 // Specify a optional status led by GPIO number which blinks when entering the bootloader
 // 定义震动马达针脚
 #define SOLENOID_PIN GP25
 // 定义蜂鸣器针脚
@@ -36,12 +40,15 @@
 #define SPLIT_LED_STATE_ENABLE
 #define SPLIT_MODS_ENABLE
 #define SPLIT_POINTING_ENABLE
+#define SPLIT_USB_DETECT
+
 
 /* SPI config for display/touchpad */
 #define SPI_DRIVER SPID1
 #define SPI_SCK_PIN GP10
 #define SPI_MOSI_PIN GP11
 #define SPI_MISO_PIN GP12
+
 
 /* touchpad config */
 #define POINTING_DEVICE_RIGHT

@@ -93,8 +93,10 @@
         "matrix": [0, 0]
     },
     "split": {
-        "enabled": true
+        "enabled": true,
+        "soft_serial_pin": "GP1"
     },
+
     "encoder": {
         "rotary": [
             {

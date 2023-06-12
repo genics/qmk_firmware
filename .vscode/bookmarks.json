@@ -1,7 +1,7 @@
 {
 	"files": [
 		{
-			"path": "keyboards/zhaqian/mote/stm32/mcuconf.h",
+			"path": "keyboards/zhaqian/mote_backup/stm32/mcuconf.h",
 			"bookmarks": [
 				{
 					"line": 20,
