@@ -13,7 +13,7 @@
 // 双击重启
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17 // Specify a optional status led by GPIO number which blinks when entering the bootloader
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17 // Specify a optional status led by GPIO number which blinks when
 // 定义震动马达针脚
 #define SOLENOID_PIN GP25
 // 定义蜂鸣器针脚
@@ -41,6 +41,8 @@
 #define SPLIT_MODS_ENABLE
 #define SPLIT_POINTING_ENABLE
 #define SPLIT_USB_DETECT
+// 定义左右手针脚
+#define SPLIT_HAND_PIN GP29
 
 
 /* SPI config for display/touchpad */
