@@ -59,3 +59,26 @@ void keyboard_post_init_kb(void) {
 
     keyboard_post_init_user();
 }
+
+
+#ifdef RGB_MATRIX_ENABLE
+bool rgb_matrix_indicators_kb(void) {
+    if (!rgb_matrix_indicators_user()) {
+        return false;
+    }
+
+    HSV hsv = {0, 255, rgb_matrix_get_val()};
+    RGB rgb = hsv_to_rgb(hsv);
+    switch(biton32(layer_state)) {
+        case 1: rgb_matrix_set_color(1, rgb.r, rgb.g, rgb.b); break;
+        case 2: rgb_matrix_set_color(2, rgb.r, rgb.g, rgb.b); break;
+        case 3: rgb_matrix_set_color(3, rgb.r, rgb.g, rgb.b); break;
+        case 4: rgb_matrix_set_color(4, rgb.r, rgb.g, rgb.b); break;
+        case 5: rgb_matrix_set_color(5, rgb.r, rgb.g, rgb.b); break;
+        case 6: rgb_matrix_set_color(6, rgb.r, rgb.g, rgb.b); break;
+        case 7: rgb_matrix_set_color(7, rgb.r, rgb.g, rgb.b); break;
+        default: break;
+    }
+    return true;
+}
+#endif
