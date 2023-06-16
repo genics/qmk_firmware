@@ -63,11 +63,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
       KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LSFT,  HOME_A,  HOME_S,  HOME_D,  HOME_F,  KC_G,               KC_H,   HOME_J,  HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
+      KC_LSFT,  HF_DWLU,  HF_DWLD,  HOME_D,  HOME_F,  KC_G,               KC_H,   HOME_J,  HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,               KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
+      HF_BUZZ,  HF_NEXT,    HF_PREV,    HF_CONT	,    HF_CONU,    HF_COND,               KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-              KC_A,    KC_LALT,    KC_ENT, MO(1), CW_TOGG,          KC_A,   MO(2),   KC_SPC,    KC_A,   KC_A
+            HF_ON,   HF_OFF,   HF_TOGG, HF_RST, HF_FDBK,           HF_FDBK,   FUNC_ENT,   NAV_BSPC,    RALT_DEL,    QK_BOOT
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
     ),
 
