@@ -59,15 +59,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_QWERTY] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
+      FUNC_ESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
       KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LSFT,  HF_DWLU,  HF_DWLD,  HOME_D,  HOME_F,  KC_G,               KC_H,   HOME_J,  HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
+      KC_LSFT,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,               KC_H,   KC_J,    KC_K,    KC_L,    KC_SCLN, KC_P,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      HF_BUZZ,  HF_NEXT,    HF_PREV,    HF_CONT	,    HF_CONU,    HF_COND,               KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
+      KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,               KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_P,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-            HF_ON,   HF_OFF,   HF_TOGG, HF_RST, HF_FDBK,           HF_FDBK,   FUNC_ENT,   NAV_BSPC,    RALT_DEL,    QK_BOOT
+                KC_MUTE, KC_LALT, SYM_SPC, FUNC_ESC,LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,QK_BOOT
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
     ),
 
@@ -129,15 +129,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FUNC] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      KC_Q,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                 KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_5,
+      KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               RGB_TOG,  RGB_MOD, RGB_RMOD,   RGB_VAI,  RGB_VAD, AU_TOGG,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Q,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                 KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_P,
+      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_A,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                 KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_P,
+      KC_LSFT,  HF_DWLU,  HF_DWLD,  HOME_D,  HOME_F,  KC_G,             KC_H,   HOME_J,  HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Z,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                 KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_P,
+      HF_BUZZ,  HF_NEXT,  HF_PREV,  HF_CONT, HF_CONU, HF_COND,          KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-              KC_A,    KC_A,    KC_A,     MO(2), CW_TOGG,               KC_SPC,  MO(1),   KC_A,    KC_A,   KC_A
+            HF_ON,   HF_OFF,   HF_TOGG, HF_RST, HF_FDBK,                HF_FDBK,   FUNC_ENT,   NAV_BSPC,   RALT_DEL, QK_BOOT
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
     ),
 
@@ -183,3 +183,8 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 #endif // ENCODER_MAP_ENABLE
 
+// 定义摇杆轴
+// joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+//     JOYSTICK_AXIS_IN(GP27, 0, 512, 1023),
+//     JOYSTICK_AXIS_IN(GP26, 0, 512, 1023)
+// };
