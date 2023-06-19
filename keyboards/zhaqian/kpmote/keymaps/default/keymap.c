@@ -131,11 +131,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
       KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               RGB_TOG,  RGB_MOD, RGB_RMOD,   RGB_VAI,  RGB_VAD, AU_TOGG,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
+      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_PGUP,   KC_U,    KC_UP,    KC_O,    KC_P,    KC_DEL,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LSFT,  HF_DWLU,  HF_DWLD,  HOME_D,  HOME_F,  KC_G,             KC_H,   HOME_J,  HOME_K,  HOME_L,  HOME_SCLN, KC_QUOT,
+      KC_LSFT,  HF_DWLU,  HF_DWLD,  HOME_D,  HOME_F,  KC_G,             KC_PGDN,   KC_LEFT,  KC_DOWN,  KC_RIGHT,  HOME_SCLN, KC_QUOT,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      HF_BUZZ,  HF_NEXT,  HF_PREV,  HF_CONT, HF_CONU, HF_COND,          KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
+      HF_BUZZ,  HF_NEXT,  HF_PREV,  HF_CONT, HF_CONU, HF_COND,          KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, EE_CLR,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
             HF_ON,   HF_OFF,   HF_TOGG, HF_RST, HF_FDBK,                HF_FDBK,   FUNC_ENT,   NAV_BSPC,   RALT_DEL, QK_BOOT
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯

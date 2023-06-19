@@ -13,4 +13,8 @@
 // 打开pwm给音频用
 #undef RP_PWM_USE_PWM1
 #define RP_PWM_USE_PWM1 TRUE
+// 打开pwm给lcd背光用
+#undef RP_PWM_USE_PWM7
+#define RP_PWM_USE_PWM7 TRUE
+
 

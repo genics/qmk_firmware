@@ -83,7 +83,7 @@ void init_screen_home(void) {
 bool display_init_kb(void) {
     dprint("display_init_kb - start\n");
 
-    // backlight_enable();
+    backlight_enable();
 
     painter_device_t display = qp_st7789_make_spi_device(240, 300, LCD_CS_PIN, LCD_DC_PIN, LCD_RST_PIN, 16, 3);
     qp_set_viewport_offsets(display, 0, 20);
