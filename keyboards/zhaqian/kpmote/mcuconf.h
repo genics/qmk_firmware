@@ -17,4 +17,7 @@
 #undef RP_PWM_USE_PWM7
 #define RP_PWM_USE_PWM7 TRUE
 
+#undef RP_PWM_USE_ADC1
+#define RP_PWM_USE_ADC1 TRUE
+
 

@@ -41,6 +41,19 @@
 #define GOODBYE_SONG SONG(CAMPANELLA)
 #define MUSIC_ON_SONG SONG(ZELDA_PUZZLE)
 #endif
+// 定义zhaqian摇杆
+#ifdef JOYSTICK_TRIGGER_ENABLE
+#define ADC_RESOLUTION ADC_CFGR1_RES_10BIT
+#define JOYSTICK_ADC_RESOLUTION 10
+#define JOYSTICK_USE_LPF
+#define JOYSTICK_LPF_PROPORTION (0.2)
+#define JOYSTICK_AXES_X_PIN { GP27 }
+#define JOYSTICK_AXES_Y_PIN { GP26 }
+#define JOYSTICK_AXES_PX_KEY_POS {0, 0}
+#define JOYSTICK_AXES_NX_KEY_POS {1, 0}
+#define JOYSTICK_AXES_PY_KEY_POS {2, 0}
+#define JOYSTICK_AXES_NY_KEY_POS {3, 0}
+#endif
 
 
 /* any side can be master by default, enable split sync to support it */
@@ -56,15 +69,15 @@
 #define SPLIT_HAND_PIN_LOW_IS_LEFT // High -> right, Low -> left.
 
 
-// 定义摇杆功能
-// Min 0, max 32
-#define JOYSTICK_BUTTON_COUNT 0
-// Min 0, max 6: X, Y, Z, Rx, Ry, Rz
-#define JOYSTICK_AXIS_COUNT 2
-// Min 8, max 16
-#define JOYSTICK_AXIS_RESOLUTION 12
-#define ANALOG_JOYSTICK_X_AXIS_PIN GP27
-#define ANALOG_JOYSTICK_Y_AXIS_PIN GP26
+// // 定义官方摇杆功能
+// // Min 0, max 32
+// #define JOYSTICK_BUTTON_COUNT 0
+// // Min 0, max 6: X, Y, Z, Rx, Ry, Rz
+// #define JOYSTICK_AXIS_COUNT 2
+// // Min 8, max 16
+// #define JOYSTICK_AXIS_RESOLUTION 12
+// #define ANALOG_JOYSTICK_X_AXIS_PIN GP27
+// #define ANALOG_JOYSTICK_Y_AXIS_PIN GP26
 
 /* SPI config for display/touchpad */
 #define SPI_DRIVER SPID1

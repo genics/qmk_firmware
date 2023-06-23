@@ -13,8 +13,8 @@ QUANTUM_PAINTER_LVGL_INTEGRATION = yes
 SRC += lvgl_helpers.c \
 	   display.c
 
-# 打开摇杆功能
-JOYSTICK_ENABLE = yes
+# # 打开摇杆功能
+# JOYSTICK_ENABLE = yes
 
 # 打开震动
 HAPTIC_ENABLE = yes
@@ -50,3 +50,8 @@ SIGNALRGB_ENABLE = yes
 # COMBO_ENABLE = yes
 # DYNAMIC_COMBOS_ENABLE = yes
 # AUTO_SWITCH_LAYERS_ENABLE = yes
+
+# 摇杆功能
+JOYSTICK_TRIGGER_ENABLE = yes
+
+OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE

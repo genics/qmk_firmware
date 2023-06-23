@@ -10,3 +10,15 @@ QUANTUM_PAINTER_LVGL_INTEGRATION = yes
 
 SRC += lvgl_helpers.c \
 	   display.c
+
+
+# # VIA_ENABLE = yes
+JOYSTICK_TRIGGER_ENABLE = yes
+
+# 打开震动
+HAPTIC_ENABLE = yes
+# HAPTIC_DRIVER += DRV2605L
+HAPTIC_DRIVER += SOLENOID
+# 打开音频效果
+AUDIO_ENABLE = yes
+AUDIO_DRIVER = pwm_hardware

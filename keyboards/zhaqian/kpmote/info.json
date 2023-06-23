@@ -127,9 +127,9 @@
         "pin": "GP28"
     },
     "rgblight": {
-        "led_count": 78,
+        "led_count": 76,
         "split": true,
-        "split_count": [39, 39]
+        "split_count": [38, 38]
     },
     "rgb_matrix": {
         "driver": "WS2812",

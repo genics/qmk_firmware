@@ -72,7 +72,7 @@ void init_screen_home(void) {
     label_shift = create_button(mods_row2, "SFT", &style_button, &style_button_active);
 
     lv_obj_t *label_stront = lv_label_create(screen_home);
-    lv_label_set_text(label_stront, "stront");
+    lv_label_set_text(label_stront, "MOTE");
 #if LV_FONT_MONTSERRAT_48
     lv_obj_set_style_text_font(label_stront, &lv_font_montserrat_48, LV_PART_MAIN);
 #endif
