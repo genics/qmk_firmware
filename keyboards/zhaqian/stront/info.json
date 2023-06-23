@@ -1,5 +1,5 @@
 {
-    "keyboard_name": "mote",
+    "keyboard_name": "KP-MOTE",
     "manufacturer": "kpaxart",
     "url": "https://github.com/zzeneg/stront",
     "maintainer": "kpaxart",
@@ -221,7 +221,7 @@
     },
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0844",
-        "vid": "0xFEED"
+        "pid": "0x1988",
+        "vid": "0x0808"
     }
 }

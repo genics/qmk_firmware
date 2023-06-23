@@ -1,3 +1,0 @@
-qmk flash -kb zhaqian/kp58/stm32 -km via -bl uf2-split-left
-
-qmk flash -kb zhaqian/kp58/air32 -km via -bl uf2-split-right
