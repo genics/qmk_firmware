@@ -57,12 +57,17 @@
 
 
 /* any side can be master by default, enable split sync to support it */
-// #define EE_HANDS
-// #define SPLIT_LED_STATE_ENABLE
+#define SPLIT_LED_STATE_ENABLE
 #define SPLIT_MODS_ENABLE
 #define SPLIT_POINTING_ENABLE
-#define SPLIT_USB_DETECT
 #define SPLIT_HAPTIC_ENABLE
+// #define EE_HANDS
+// #define SPLIT_TRANSPORT_MIRROR
+// #define SPLIT_LAYER_STATE_ENABLE
+// #define SPLIT_USB_DETECT
+// #define RGBLIGHT_SPLIT
+
+#define MASTER_RIGHT
 
 // 定义左右手针脚
 #define SPLIT_HAND_PIN GP29
@@ -138,9 +143,9 @@
 #define DYNAMIC_KEYMAP_LAYER_COUNT 7
 #endif
 
-// #ifdef OPENRGB_ENABLE
-// #define OPENRGB_DIRECT_MODE_USE_UNIVERSAL_BRIGHTNESS
-// #endif
+#ifdef OPENRGB_ENABLE
+#define OPENRGB_DIRECT_MODE_USE_UNIVERSAL_BRIGHTNESS
+#endif
 
 #ifdef DYNAMIC_TAP_DANCE_ENABLE
 #define DYNAMIC_TAP_DANCE_ENTRIES 10
@@ -150,6 +155,3 @@
 #define DYNAMIC_COMBOS_ENTRIES 10
 #endif
 
-#ifdef AUTO_SWITCH_LAYERS_ENABLE
-#define ASL_NO_UPDATE_FN_KEYCODE
-#endif
