@@ -76,7 +76,7 @@
 // #define SPLIT_USB_TIMEOUT 5000
 // #define SPLIT_USB_TIMEOUT_POLL 25
 // #undef SPLIT_USB_DETECT
-// #define USB_VBUS_PIN GP19
+#define USB_VBUS_PIN GP19
 
 
 // // 定义官方摇杆功能
