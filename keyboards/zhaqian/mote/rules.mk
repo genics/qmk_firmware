@@ -2,9 +2,8 @@ SERIAL_DRIVER = vendor
 WS2812_DRIVER = vendor
 
 POINTING_DEVICE_ENABLE = yes
-POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
-# 摇杆驱动
-# POINTING_DEVICE_DRIVER = analog_joystick
+# POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
+POINTING_DEVICE_DRIVER = pmw3360
 
 QUANTUM_PAINTER_ENABLE = yes
 QUANTUM_PAINTER_DRIVERS += st7789_spi
@@ -13,3 +12,5 @@ QUANTUM_PAINTER_LVGL_INTEGRATION = yes
 SRC += lvgl_helpers.c \
 	   display.c
 
+# 摇杆驱动
+# POINTING_DEVICE_DRIVER = analog_joystick

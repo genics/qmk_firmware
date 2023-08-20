@@ -117,8 +117,8 @@
         ]
     },
     "features": {
-        "command": false,
-        "console": false,
+        "command": true,
+        "console": true,
         "encoder": true,
         "backlight": true,
         "mousekey": true,

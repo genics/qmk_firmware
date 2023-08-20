@@ -9,6 +9,16 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "keyboards/boston_meetup/2019/config.h",
+			"bookmarks": [
+				{
+					"line": 41,
+					"column": 35,
+					"label": ""
+				}
+			]
 		}
 	]
 }

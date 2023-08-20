@@ -20,4 +20,7 @@
 #undef RP_PWM_USE_ADC1
 #define RP_PWM_USE_ADC1 TRUE
 
+#undef RP_I2C_USE_I2C1
+#define RP_I2C_USE_I2C1 TRUE
+
 

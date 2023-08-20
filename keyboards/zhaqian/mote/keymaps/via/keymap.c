@@ -6,11 +6,11 @@
 enum layer_number {
     // clang-format off
     _QWERTY = 0,
-    _GAME,
-    _NAV,
-    _NUMBER,
-    _SYMBOL,
-    _FUNC,
+    _GAME = 1,
+    _NAV= 2,
+    _NUMBER= 3,
+    _SYMBOL= 4,
+    _FUNC= 5,
     _SYS
     // clang-format on
 };
@@ -59,17 +59,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_QWERTY] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      FUNC_ESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,            KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
+      FUNC_ESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,              KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,        KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
+      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,              KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LSFT,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,         KC_H,   KC_J,    KC_K,    KC_L,    KC_SCLN, KC_P,
+      KC_LSFT,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,              KC_H,   KC_J,    KC_K,    KC_L,    KC_SCLN, KC_RSFT,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,         KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_P,
+      KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,              KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RCTL,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-                KC_MUTE, KC_LALT, SYM_SPC, FUNC_ESC,LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,QK_BOOT,
+                KC_MUTE, KC_LALT, KC_SPC, FUNC_ESC,LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,QK_BOOT,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
-                         KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,              KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
+                         KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,             KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
     ),
 
     [_GAME] = LAYOUT(
@@ -219,3 +219,71 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 //     set_auto_mouse_layer(1); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
 //     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
 // }
+
+
+// oled设置
+#ifdef OLED_ENABLE
+
+static void render_logo(void) {
+    static const char PROGMEM raw_logo[] = {
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 12, 12,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 12, 12,  0,  0,  0,  0,  0,  0,  0,  6,  6,  6,  6,  6,134,230,126, 30,  6,  0,  0,  0,  0,  0,128,192, 96, 56, 28,  6,  2,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,248,252,  6,  3,  3,  3,  3,  7,254,252,  6,  3,  3,  3,  3,  6,252,248,  0,  0,  0,  0,  0,  0,255,255,  0,  0,  0,  0,  0,  0,248,252,  6,  3,  3,  3,  3,  3,  3,  6,252,248,  0,  0,  0,  0,  0,  0,255,255,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 28, 31, 27, 24, 48,224,192,  0,  0,240,252, 62, 27, 25, 24, 24, 24, 24, 48,224,192,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0,  0,127,127,  0,  0,  0,  0,  0, 12, 24, 48, 96, 96, 96, 96, 96, 96, 48, 31, 15,  0,  0, 15, 31, 48, 96, 96, 96, 96, 96, 96, 48, 31, 15,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    };
+    oled_write_raw_P(raw_logo, sizeof(raw_logo));
+}
+
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+    if (!is_keyboard_master()) {
+        return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
+    }
+
+    return rotation;
+}
+
+bool render_status(void) {
+    // Host Keyboard Layer Status
+    oled_write_P(PSTR("Layer: "), false);
+
+    switch (get_highest_layer(layer_state)) {
+        case 0:
+            oled_write_P(PSTR("BASE\n"), false);
+            break;
+        case 1:
+            oled_write_P(PSTR("LOWER\n"), false);
+            break;
+        case 2:
+            oled_write_P(PSTR("RAISE\n"), false);
+            break;
+        case 3:
+            oled_write_P(PSTR("ADJUST\n"), false);
+            break;
+        default:
+            // Or use the write_ln shortcut over adding '\n' to the end of your string
+            oled_write_ln_P(PSTR("Undefined"), false);
+    }
+
+    // Host Keyboard LED Status
+    led_t led_state = host_keyboard_led_state();
+    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
+    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+
+    return false;
+}
+
+bool oled_task_kb(void) {
+    if (!oled_task_user()) {
+        return false;
+    }
+    if (is_keyboard_master()) {
+        render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
+    } else {
+        render_logo();  // Renders a static logo
+        oled_scroll_left();  // Turns on scrolling
+    }
+    return false;
+}
+
+#endif
+
