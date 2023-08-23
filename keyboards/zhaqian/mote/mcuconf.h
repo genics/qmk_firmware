@@ -16,10 +16,10 @@
 // 打开pwm给lcd背光用
 #undef RP_PWM_USE_PWM7
 #define RP_PWM_USE_PWM7 TRUE
-
+// 打开adc给摇杆用
 #undef RP_PWM_USE_ADC1
 #define RP_PWM_USE_ADC1 TRUE
-
+// 打开i2c给oled用
 #undef RP_I2C_USE_I2C1
 #define RP_I2C_USE_I2C1 TRUE
 
