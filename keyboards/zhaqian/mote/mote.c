@@ -3,6 +3,7 @@
 
 #include "mote.h"
 #include "display.h"
+#include "user_song_list.h"
 
 static bool display_enabled;
 

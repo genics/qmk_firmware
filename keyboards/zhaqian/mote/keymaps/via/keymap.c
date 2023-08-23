@@ -62,13 +62,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
       FUNC_ESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,              KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,              KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
+      NUM_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,              KC_Y,   KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
       KC_LSFT,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,              KC_H,   KC_J,    KC_K,    KC_L,    KC_SCLN, KC_RSFT,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
       KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,              KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RCTL,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-                KC_MUTE, KC_LALT, KC_SPC, FUNC_ESC,LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,QK_BOOT,
+                KC_MUTE, KC_LALT, KC_SPC, NUM_TAB, LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,QK_BOOT,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
                          KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,             KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
     ),
@@ -92,75 +92,75 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
       XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,  XXXX,  XXXX,   KC_MS_U,   XXXX,   XXXX,                    XXXX,   XXXX,   KC_UP,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,  XXXX,  KC_MS_L,   KC_MS_D,   KC_MS_R,   XXXX,              KC_PGUP,   KC_LEFT,   KC_DOWN,   KC_RIGHT,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,  XXXX,  XXXX,   XXXX,   KC_BTN1,   KC_BTN2,                 KC_PGDN,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-             XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+             KC_MUTE,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   KC_MUTE,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
                      XXXX,  XXXX,   XXXX,   XXXX,                       XXXX,  XXXX,   XXXX,   XXXX
     ),
 
     [_NUMBER] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      KC_Q,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                 KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_5,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Q,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_P,
+      XXXX,  XXXX,  KC_1,   KC_2,   KC_3,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_A,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_P,
+      XXXX,  XXXX,  KC_4,   KC_5,   KC_6,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Z,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_P,
+      XXXX,  XXXX,  KC_7,   KC_8,   KC_9,   KC_0,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-              KC_A,    KC_A,    KC_A,     MO(2), CW_TOGG,               KC_SPC,  MO(1),   KC_A,    KC_A,   KC_A,
+             XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
-                           KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,              KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
+                     XXXX,  XXXX,   XXXX,   XXXX,                       XXXX,  XXXX,   XXXX,   XXXX
     ),
 
     [_SYMBOL] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      KC_Q,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                 KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_5,
+      KC_GRV,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                     XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Q,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                 KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_P,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   KC_MINS,  KC_EQL,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_A,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                 KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_P,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   KC_LBRC,   KC_RBRC,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Z,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,               KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_P,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   KC_QUOT,   XXXX,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-              KC_A,    KC_A,    KC_A,     MO(2), CW_TOGG,               KC_SPC,  MO(1),   KC_A,    KC_A,   KC_A,
+             XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
-                           KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,              KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
+                     XXXX,  XXXX,   XXXX,   XXXX,                       XXXX,  XXXX,   XXXX,   XXXX
     ),
 
     [_FUNC] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               RGB_TOG,  RGB_MOD, RGB_RMOD,   RGB_VAI,  RGB_VAD, AU_TOGG,
+      KC_F12,  KC_F1,  KC_F2,   KC_F3,   KC_F4,   KC_F5,                KC_F6,  KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_PGUP,   KC_U,    KC_UP,    KC_O,    KC_P,    KC_DEL,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_LSFT,  HF_DWLU,  HF_DWLD,  HOME_D,  HOME_F,  KC_G,             KC_PGDN,   KC_LEFT,  KC_DOWN,  KC_RIGHT,  HOME_SCLN, KC_QUOT,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      HF_BUZZ,  HF_NEXT,  HF_PREV,  HF_CONT, HF_CONU, HF_COND,         KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, EE_CLR,
+      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-            HF_ON,   HF_OFF,   HF_TOGG, HF_RST, HF_FDBK,                HF_FDBK,   FUNC_ENT,   NAV_BSPC,   RALT_DEL, QK_BOOT,
+            HF_ON,   MO(_SYMBOL),  MO(_SYS), HF_RST, HF_FDBK,              HF_FDBK,   FUNC_ENT,   NAV_BSPC,   MO(_SYS), QK_BOOT,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
-                           KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,              KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
+                           KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,            KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
     ),
 
     [_SYS] = LAYOUT(
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
-      KC_Q,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                 KC_6,   KC_7,    KC_8,    KC_9,    KC_0,    KC_5,
+      QK_RBT,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                     DB_TOGG, MU_TOGG, CK_UP, CK_DOWN, CK_TOGG, AU_TOGG,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Q,   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                 KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_P,
+      RGB_TOG,  RGB_MOD, RGB_RMOD,   RGB_VAI,  RGB_VAD, XXXX,           XXXX, HF_ON,  HF_OFF,   HF_RST, HF_FDBK,  HF_TOGG,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_A,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                 KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_P,
+      BL_TOGG,  BL_UP,  BL_DOWN,   XXXX,   XXXX,   XXXX,                HF_NEXT,  HF_PREV,  HF_CONT, HF_CONU, HF_COND, HF_BUZZ,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      KC_Z,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_P,
+      EE_CLR,  XXXX,  XXXX,   XXXX,   XXXX,   QK_BOOT,                  QK_BOOT,   XXXX,   XXXX,   XXXX,   XXXX,   EE_CLR,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-              KC_A,    KC_A,    KC_A,     MO(2), CW_TOGG,               KC_SPC,  MO(1),   KC_A,    KC_A,   KC_A,
+             QK_BOOT,  XXXX,   XXXX,   XXXX,   XXXX,                    XXXX,   XXXX,   XXXX,   XXXX,   QK_BOOT,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
-                           KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,              KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
+                     XXXX,  XXXX,   XXXX,   XXXX,                       XXXX,  XXXX,   XXXX,   XXXX
     )
     // clang-format on
 };

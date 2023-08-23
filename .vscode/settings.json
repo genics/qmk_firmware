@@ -30,5 +30,7 @@
     },
     "clangd.arguments": [
         "--header-insertion=never"
-    ]
+    ],
+    "C_Cpp.dimInactiveRegions": false,
+    "C_Cpp.default.compilerPath": "C:\\QMK_MSYS\\mingw64\\bin\\clang.exe"
 }
