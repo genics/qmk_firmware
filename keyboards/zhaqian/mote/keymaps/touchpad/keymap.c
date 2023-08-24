@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
       KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,              KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RCTL,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-                KC_MUTE, KC_LALT, KC_SPC, NUM_TAB, LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,QK_BOOT,
+                KC_MUTE, KC_LALT, KC_SPC, NUM_TAB, LGUI_QUOT,          KC_RSFT,RALT_DEL,FUNC_ENT,NAV_BSPC,KC_MUTE,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
                          KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,             KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
     ),
@@ -137,15 +137,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭───────────────────────────────────────────────────╮            ╭───────────────────────────────────────────────────╮
       KC_F12,  KC_F1,  KC_F2,   KC_F3,   KC_F4,   KC_F5,                KC_F6,  KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,  XXXX,  XXXX,   KC_MS_U,   XXXX,   XXXX,                    XXXX,   XXXX,   KC_UP,    KC_MINS,  KC_EQL,   XXXX,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,  XXXX,  KC_MS_L,   KC_MS_D,   KC_MS_R,   XXXX,              KC_PGUP,   KC_LEFT,   KC_DOWN,   KC_RIGHT,   KC_LBRC,   KC_RBRC,
   // ├───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────┤
-      XXXX,  XXXX,  XXXX,   XXXX,   XXXX,   XXXX,                       XXXX,   XXXX,   XXXX,   XXXX,   XXXX,   XXXX,
+      XXXX,  XXXX,  XXXX,   XXXX,   KC_BTN1,   KC_BTN2,                 KC_PGDN,   XXXX,   XXXX,   XXXX,   KC_QUOT,   XXXX,
   // ╰───────────────────────────────────────────────────┤            ├───────────────────────────────────────────────────╯
-            HF_ON,   MO(_SYMBOL),  MO(_SYS), HF_RST, HF_FDBK,              HF_FDBK,   FUNC_ENT,   NAV_BSPC,   MO(_SYS), QK_BOOT,
+            QK_BOOT, MO(_SYMBOL),  MO(_SYS), XXXX, XXXX,                XXXX,   FUNC_ENT,   NAV_BSPC,   MO(_SYS), QK_BOOT,
   //       ╰─────────────────────────────────────────────╯            ╰──────────────────────────────────────────╯
-                           KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,            KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
+                        KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT,               KC_UP, KC_DOWN, KC_LEFT,KC_RIGHT
     ),
 
     [_SYS] = LAYOUT(
