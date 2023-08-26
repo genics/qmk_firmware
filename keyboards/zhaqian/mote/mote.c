@@ -5,6 +5,12 @@
 #include "display.h"
 #include "user_song_list.h"
 
+
+#ifdef CONSOLE_ENABLE
+#    include "print.h"
+#endif // CONSOLE_ENABLE
+
+
 static bool display_enabled;
 
 /* public function to be used in keymaps */

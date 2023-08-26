@@ -16,8 +16,6 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17 // Specify a optional status led by GPIO number which blinks when
 // 定义震动马达针脚
 #define SOLENOID_PIN GP25
-
-// #define SOLENOID_PIN_ACTIVE_LOW
 #define HAPTIC_OFF_IN_LOW_POWER 1
 #define SOLENOID_RANDOM_FIRE
 #define SOLENOID_DEFAULT_BUZZ 1
@@ -75,6 +73,7 @@
 #define GOODBYE_SONG SONG(CAMPANELLA)
 #define MUSIC_ON_SONG SONG(ZELDA_PUZZLE)
 #endif
+
 // 定义zhaqian摇杆
 #ifdef JOYSTICK_TRIGGER_ENABLE
 #define ADC_RESOLUTION ADC_CFGR1_RES_12BIT
@@ -90,7 +89,7 @@
 #endif
 
 
-/* any side can be master by default, enable split sync to support it */
+// 分离键盘参数
 #define SPLIT_LED_STATE_ENABLE
 #define SPLIT_MODS_ENABLE
 #define SPLIT_POINTING_ENABLE
@@ -99,12 +98,9 @@
 #define SPLIT_LAYER_STATE_ENABLE
 #define RGBLIGHT_SPLIT
 
-// #define MASTER_RIGHT
 
 // 定义左右手针脚
 #define SPLIT_HAND_PIN GP29
-// #define SPLIT_HAND_PIN_LOW_IS_LEFT // High -> right, Low -> left.
-// #define SPLIT_USB_DETECT
 
 // 设置vbus检测
 // #define SPLIT_USB_TIMEOUT 5000
@@ -122,31 +118,13 @@
 // #define ANALOG_JOYSTICK_X_AXIS_PIN GP27
 // #define ANALOG_JOYSTICK_Y_AXIS_PIN GP26
 
-/* SPI config for display/touchpad */
+// 显示屏和触控板的spi设置
 #define SPI_DRIVER SPID1
 #define SPI_SCK_PIN GP10
 #define SPI_MOSI_PIN GP11
 #define SPI_MISO_PIN GP12
 
 
-/* touchpad config */
-// #define POINTING_DEVICE_RIGHT
-// #define POINTING_DEVICE_CS_PIN GP9
-// #define POINTING_DEVICE_TASK_THROTTLE_MS 10
-// #define POINTING_DEVICE_ROTATION_90
-// #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
-// #define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
-
-// 触控板设置
-// #define CIRQUE_PINNACLE_DIAMETER_MM 40
-// #define CIRQUE_PINNACLE_CURVED_OVERLAY
-// #define CIRQUE_PINNACLE_ATTENUATION EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_3X
-// #define CIRQUE_PINNACLE_TAP_ENABLE
-// #define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
-
-// 打开触控板自动切层
-// #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-// #define AUTO_MOUSE_DEFAULT_LAYER 1
 
 // LCD设置
 #define LCD_DC_PIN GP12
@@ -159,7 +137,7 @@
 // 定义刷机按钮位置
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
-#define BOOTMAGIC_LITE_ROW_RIGHT 0
+#define BOOTMAGIC_LITE_ROW_RIGHT 6
 #define BOOTMAGIC_LITE_COLUMN_RIGHT 0
 
 // 加入zhaqian的设置
