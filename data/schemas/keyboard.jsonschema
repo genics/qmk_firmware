@@ -71,6 +71,8 @@
                 "STM32F446",
                 "STM32G431",
                 "STM32G474",
+                "STM32H723",
+                "STM32H733",
                 "STM32L412",
                 "STM32L422",
                 "STM32L432",
@@ -85,6 +87,11 @@
                 "AT32F413",
                 "AT32F403A",
                 "AT32F407",
+                "AT32F402",
+                "AT32F405",
+                "AT32F435",
+                "AT32F437",
+                "AT32F423",
                 "atmega16u2",
                 "atmega32u2",
                 "atmega16u4",
@@ -151,7 +158,7 @@
             "properties": {
                 "driver": {
                     "type": "string",
-                    "enum": ["BluefruitLE", "RN42", "custom"]
+                    "enum": ["bluefruit_le", "custom", "rn42"]
                 }
             }
         },
@@ -179,6 +186,7 @@
         "bootloader": {
             "type": "string",
             "enum": [
+                "apm32-dfu",
                 "atmel-dfu",
                 "bootloadhid",
                 "caterina",
@@ -259,7 +267,11 @@
                 "enabled": {"type": "boolean"}
             }
         },
-        "features": {"$ref": "qmk.definitions.v1#/boolean_array"},
+        "features": {
+            "$ref": "qmk.definitions.v1#/boolean_array",
+            "propertyNames": { "$ref": "qmk.definitions.v1#/snake_case" }
+
+        },
         "indicators": {
             "type": "object",
             "properties": {
@@ -373,6 +385,7 @@
             "properties": {
                 "animations": {
                     "type": "object",
+                    "propertyNames": { "$ref": "qmk.definitions.v1#/snake_case" }
                     "additionalProperties": {
                         "type": "boolean"
                     }
@@ -386,8 +399,6 @@
                 },
                 "max_brightness": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
                 "timeout": {"$ref": "qmk.definitions.v1#/unsigned_int"},
-                "hue_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
-                "sat_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
                 "val_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
                 "speed_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
                 "split_count": {
@@ -424,6 +435,7 @@
             "properties": {
                 "animations": {
                     "type": "object",
+                    "propertyNames": { "$ref": "qmk.definitions.v1#/snake_case" }
                     "additionalProperties": {
                         "type": "boolean"
                     }
@@ -476,11 +488,16 @@
             "properties": {
                 "animations": {
                     "type": "object",
+                    "propertyNames": { "$ref": "qmk.definitions.v1#/snake_case" }
                     "additionalProperties": {
                         "type": "boolean"
                     }
                 },
                 "brightness_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
+                "driver": {
+                    "type": "string",
+                    "enum": ["apa102", "custom", "ws2812"]
+                },
                 "hue_steps": {"$ref": "qmk.definitions.v1#/unsigned_int"},
                 "layers": {
                     "type": "object",
@@ -497,6 +514,11 @@
                     }
                 },
                 "led_count": {"$ref": "qmk.definitions.v1#/unsigned_int"},
+                "led_map": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {"$ref": "qmk.definitions.v1#/unsigned_int"}
+                },
                 "max_brightness": {"$ref": "qmk.definitions.v1#/unsigned_int_8"},
                 "pin": {
                     "$ref": "qmk.definitions.v1#/mcu_pin",
