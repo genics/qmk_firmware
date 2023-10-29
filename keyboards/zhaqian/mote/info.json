@@ -139,7 +139,7 @@
         "split_count": [38, 38]
     },
     "rgb_matrix": {
-        "driver": "WS2812",
+        "driver": "ws2812",
         "led_count": 76,
         "split_count": [38, 38],
         "layout": [
