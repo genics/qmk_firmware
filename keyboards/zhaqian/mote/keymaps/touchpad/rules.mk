@@ -3,8 +3,8 @@
 
 # 打开震动
 HAPTIC_ENABLE = yes
-# HAPTIC_DRIVER += DRV2605L
-HAPTIC_DRIVER += SOLENOID
+# HAPTIC_DRIVER = drv2605l
+HAPTIC_DRIVER = solenoid
 # 打开音频
 AUDIO_ENABLE = yes
 AUDIO_DRIVER = pwm_hardware
@@ -32,7 +32,7 @@ COMBO_ENABLE = yes
 DYNAMIC_COMBOS_ENABLE = yes
 AUTO_SWITCH_LAYERS_ENABLE = yes
 # 摇杆功能如果右边是编码器，关掉它重新生成固件，烧录右边，
-# JOYSTICK_TRIGGER_ENABLE = yes
+JOYSTICK_TRIGGER_ENABLE = yes
 
 # 加入oled显示屏
 # OLED_ENABLE = no

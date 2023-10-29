@@ -3,7 +3,7 @@
 
 # 打开震动
 HAPTIC_ENABLE = yes
-# HAPTIC_DRIVER += DRV2605L
+# HAPTIC_DRIVER = drv2605l
 HAPTIC_DRIVER = solenoid
 # 打开音频
 AUDIO_ENABLE = yes
